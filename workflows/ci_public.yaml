@@ -14,16 +14,6 @@ env:
   REPOSITORY_TYPE: admin
 
 jobs:
-  trigger-admin:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger admin workflow
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: Niko-Zvar/Test_public
-          event-type: trigger-ci
-
   install-dependencies:
     name: Installing dependencies
     runs-on: ubuntu-latest

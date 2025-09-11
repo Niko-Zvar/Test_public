@@ -4,4 +4,4 @@ def check_ci(a: int, b: float) -> float:
 
 check_ci(4, 3)
 
-check_ci(3, 3.9)
+check_ci(3, 3.7)
