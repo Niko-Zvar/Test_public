@@ -1,0 +1,28 @@
+name: Mypy Check
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  trigger-admin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger admin workflow
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Niko-Zvar/Test_admin
+          event-type: trigger-ci
+  mypy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install mypy
+        run: pip install mypy
+      - name: Run mypy
+        run: mypy
