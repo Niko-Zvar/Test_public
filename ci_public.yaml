@@ -21,7 +21,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: fipl-hse/2025-2-level-labs-admin
+          repository: Niko-Zvar/Test_public
           event-type: trigger-ci
 
   install-dependencies:
