@@ -3,5 +3,3 @@ def check_ci(a: int, b: float) -> float:
     return print(c, type(c))
 
 check_ci(12, 12)
-
-check_ci(12, 12.7)
