@@ -2,9 +2,9 @@ name: "Check PR"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ check_ci ]
   pull_request:
-    branches: [ main ]
+    branches: [ check_ci ]
 
 concurrency:
   group: ${{ github.repository }}-${{ github.ref }}-public
